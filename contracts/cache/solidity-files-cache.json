@@ -1,0 +1,114 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "D:\\work7\\NexusLink\\.worktrees\\phase1\\contracts\\contracts\\DIDRegistry.sol": {
+      "lastModificationDate": 1774976239615,
+      "contentHash": "8c44a94c642547f835f4066fe24695a3",
+      "sourceName": "contracts/DIDRegistry.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": [
+        "DIDRegistry"
+      ]
+    },
+    "D:\\work7\\NexusLink\\.worktrees\\phase1\\contracts\\contracts\\NSSRegistry.sol": {
+      "lastModificationDate": 1774976246749,
+      "contentHash": "735362e9bc8a021e06da44480fe8fdbf",
+      "sourceName": "contracts/NSSRegistry.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": [
+        "NSSRegistry"
+      ]
+    },
+    "D:\\work7\\NexusLink\\.worktrees\\phase1\\contracts\\contracts\\Settlement.sol": {
+      "lastModificationDate": 1774976255137,
+      "contentHash": "f189400643e709d6f350c03ad8ab036c",
+      "sourceName": "contracts/Settlement.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": [
+        "IERC20",
+        "Settlement"
+      ]
+    }
+  }
+}

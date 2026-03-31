@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { homedir } from 'os';
-import { join, resolve } from 'path';
+import { dirname } from 'path';
 import yaml from 'yaml';
 import type { NexusConfig } from '../types.js';
 import { DEFAULT_CONFIG, DEFAULT_CONFIG_PATH } from '../types.js';
@@ -20,7 +20,7 @@ function loadYaml(path: string): Partial<NexusConfig> {
 
 function resolvedDir(filePath: string): string {
   const resolved = resolvePath(filePath);
-  return resolved.substring(0, resolved.lastIndexOf('/'));
+  return dirname(resolved);
 }
 
 function saveYaml(path: string, config: NexusConfig): void {

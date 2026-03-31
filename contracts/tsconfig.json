@@ -7,5 +7,5 @@
     "esModuleInterop": true,
     "skipLibCheck": true
   },
-  "include": ["hardhat.config.ts", "scripts", "test"]
+  "include": ["hardhat.config.cjs", "scripts", "test"]
 }

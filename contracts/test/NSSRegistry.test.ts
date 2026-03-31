@@ -1,8 +1,8 @@
-import { expect } from 'chai';
-import { ethers } from 'hardhat';
+const { expect } = require('chai');
+const { ethers } = require('hardhat');
 
 describe('NSSRegistry', () => {
-  let contract: any;
+  let contract;
 
   beforeEach(async () => {
     const f = await ethers.getContractFactory('NSSRegistry');
