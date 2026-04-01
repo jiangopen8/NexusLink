@@ -1,0 +1,30 @@
+{
+  "name": "@nexuslink/marketplace",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "import": "./dist/index.js", "types": "./dist/index.d.ts" }
+  },
+  "bin": {
+    "nexuslink-marketplace": "./dist/server.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "start": "node dist/server.js",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@nexuslink/core-nss": "workspace:*",
+    "@nexuslink/core-config": "workspace:*",
+    "@nexuslink/core-governance": "workspace:*",
+    "@nexuslink/skills": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "vitest": "^1.6.0",
+    "typescript": "^5.0.0"
+  }
+}
