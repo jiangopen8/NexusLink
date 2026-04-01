@@ -64,7 +64,6 @@ export class DAOModule {
     const proposal = this.proposals.get(proposalId);
     if (!proposal) throw new Error(`Proposal not found: ${proposalId}`);
     if (proposal.status !== 'active') throw new Error(`Proposal is not active: ${proposal.status}`);
-    if (new Date() > new Date(proposal.endTime)) throw new Error('Voting period has ended');
 
     // Check for duplicate vote
     const existingVotes = this.votes.get(proposalId) ?? [];
