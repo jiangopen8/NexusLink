@@ -1,11 +1,15 @@
 export type Network = 'testnet' | 'mainnet' | 'local';
 export type OutputFormat = 'table' | 'json' | 'yaml' | 'quiet';
-export type StorageBackend = 'ipfs';
+export type StorageBackend = 'ipfs' | '0g';
 
 export interface StorageConfig {
   backend: StorageBackend;
-  pinataApiKey: string;
-  pinataSecret: string;
+  // IPFS/Pinata credentials
+  pinataApiKey?: string;
+  pinataSecret?: string;
+  // 0G credentials
+  zeroGApiKey?: string;
+  zeroGApiUrl?: string;
 }
 
 export interface WalletConfig {
@@ -33,6 +37,8 @@ export const DEFAULT_CONFIG: NexusConfig = {
     backend: 'ipfs',
     pinataApiKey: '',
     pinataSecret: '',
+    zeroGApiKey: '',
+    zeroGApiUrl: 'https://api.0g.storage',
   },
   wallet: {
     keystore: '~/.nexuslink/keystore',

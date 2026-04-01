@@ -4,8 +4,14 @@ export interface SALBackend {
   unpin(cid: string): Promise<void>;
 }
 
+export type SALBackendType = 'ipfs' | '0g' | 'zerog';
+
 export interface SALOptions {
-  backend: 'ipfs';
-  pinataApiKey: string;
-  pinataSecret: string;
+  backend: SALBackendType;
+  // IPFS/Pinata credentials
+  pinataApiKey?: string;
+  pinataSecret?: string;
+  // 0G credentials
+  zeroGApiKey?: string;
+  zeroGApiUrl?: string;
 }

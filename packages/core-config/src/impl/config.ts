@@ -68,6 +68,21 @@ export class ConfigStore {
     }
   }
 
+  getStorageConfig() {
+    return {
+      backend: this.config.storage.backend,
+      pinataApiKey: this.config.storage.pinataApiKey ?? process.env.PINATA_API_KEY,
+      pinataSecret: this.config.storage.pinataSecret ?? process.env.PINATA_SECRET,
+      zeroGApiKey: this.config.storage.zeroGApiKey ?? process.env.ZERO_G_API_KEY,
+      zeroGApiUrl: this.config.storage.zeroGApiUrl ?? 'https://api.0g.storage',
+    };
+  }
+
+  setStorageBackend(backend: 'ipfs' | '0g', credentials?: Record<string, string>): void {
+    const updatedStorage = { ...this.config.storage, ...credentials, backend };
+    this.set({ storage: updatedStorage });
+  }
+
   static init(path?: string): ConfigStore {
     const store = new ConfigStore(path);
     saveYaml(resolvePath(path ?? DEFAULT_CONFIG_PATH), store.get());

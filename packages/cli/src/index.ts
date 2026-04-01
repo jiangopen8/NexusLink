@@ -13,6 +13,7 @@ import { payCommands } from './commands/pay.js';
 import { spaceCommands } from './commands/space.js';
 import { daoCommands } from './commands/dao.js';
 import { acpCommands } from './commands/acp.js';
+import { memoryCommands } from './commands/memory.js';
 
 const program = new Command();
 
@@ -39,6 +40,7 @@ payCommands(program, formatter);
 spaceCommands(program, formatter);
 daoCommands(program, formatter);
 acpCommands(program, formatter);
+memoryCommands(program, formatter);
 
 try {
   program.parseAsync(process.argv);
