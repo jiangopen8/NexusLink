@@ -1,0 +1,29 @@
+{
+  "name": "@nexuslink/core-memory",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@nexuslink/core-config": "workspace:*",
+    "@nexuslink/core-sal": "workspace:*",
+    "@noble/hashes": "^1.8.0"
+  },
+  "devDependencies": {
+    "@nexuslink/core-config": "workspace:*",
+    "@nexuslink/core-sal": "workspace:*",
+    "@types/node": "^20.0.0",
+    "vitest": "^1.6.0"
+  }
+}

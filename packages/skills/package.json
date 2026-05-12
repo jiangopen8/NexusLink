@@ -1,0 +1,34 @@
+{
+  "name": "@nexuslink/skills",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@nexuslink/core-acp": "workspace:*",
+    "@nexuslink/core-config": "workspace:*",
+    "@nexuslink/core-governance": "workspace:*",
+    "@nexuslink/core-identity": "workspace:*",
+    "@nexuslink/core-memory": "workspace:*",
+    "@nexuslink/core-nss": "workspace:*",
+    "@nexuslink/core-sal": "workspace:*",
+    "@nexuslink/core-settlement": "workspace:*",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.39",
+    "vitest": "^4.1.5"
+  }
+}

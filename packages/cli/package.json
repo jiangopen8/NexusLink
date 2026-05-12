@@ -1,0 +1,35 @@
+{
+  "name": "@nexuslink/cli",
+  "version": "0.0.1",
+  "type": "module",
+  "bin": {
+    "nexus": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc && node dist/index.js",
+    "lint": "tsc --noEmit",
+    "test": "pnpm --dir ../.. exec turbo run build --filter=@nexuslink/cli... && vitest run",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@nexuslink/core-acp": "workspace:*",
+    "@nexuslink/core-config": "workspace:*",
+    "@nexuslink/core-governance": "workspace:*",
+    "@nexuslink/core-identity": "workspace:*",
+    "@nexuslink/core-memory": "workspace:*",
+    "@nexuslink/core-nss": "workspace:*",
+    "@nexuslink/core-sal": "workspace:*",
+    "@nexuslink/core-settlement": "workspace:*",
+    "chalk": "^5.3.0",
+    "cli-table3": "^0.6.0",
+    "commander": "^12.1.0",
+    "ora": "^8.2.0",
+    "yaml": "^2.8.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.39",
+    "vitest": "^4.1.5"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\"D:/work7/NexusLink/docs/superpowers/plans/2026-03-31-nexuslink-phase1.md\":*)",
+      "Bash(pnpm --version)",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm add:*)",
+      "Bash(pnpm run:*)",
+      "Bash(mv hardhat.config.ts hardhat.config.cjs)",
+      "Bash(ls -la hardhat.config.*)",
+      "Bash(npx hardhat:*)",
+      "Bash(for pkg:*)",
+      "Bash(do echo:*)",
+      "Read(//d/work7/NexusLink/.worktrees/phase1/packages/$pkg/**)",
+      "Bash(done)",
+      "Bash(pnpm build:*)",
+      "Bash(pnpm test:*)",
+      "Bash(npm run:*)",
+      "Bash(find packages/*/src -name \"*.ts\" -not -path \"*/dist/*\" -not -path \"*/node_modules/*\")",
+      "Bash(ls -la *.md)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(pnpm --filter @nexuslink/core-governance test)",
+      "Bash(wc -l /d/work7/NexusLink/.worktrees/phase1/packages/skills/src/skills/*.ts)",
+      "Bash(node -e ':*)",
+      "Bash(grep -r \"skill:\" packages/skills/src/skills/*.ts)",
+      "Bash(node:*)",
+      "Bash(grep -c \"skill:\" /d/work7/NexusLink/.worktrees/phase1/packages/skills/src/skills/*.ts)",
+      "Bash(git remote:*)",
+      "Bash(git push:*)",
+      "Bash(gh auth:*)",
+      "Bash(gh repo:*)",
+      "Bash(git tag:*)"
+    ]
+  }
+}

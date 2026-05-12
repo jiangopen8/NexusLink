@@ -1,0 +1,30 @@
+{
+  "name": "@nexuslink/core-nss",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@nexuslink/core-config": "workspace:*",
+    "@nexuslink/core-identity": "workspace:*",
+    "@nexuslink/core-sal": "workspace:*",
+    "viem": "^2.48.8",
+    "yaml": "^2.8.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.39",
+    "vitest": "^4.1.5"
+  }
+}

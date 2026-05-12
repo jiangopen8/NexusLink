@@ -1,0 +1,191 @@
+{
+  "main": {
+    "id": "00dc9362251bd63d",
+    "type": "split",
+    "children": [
+      {
+        "id": "256ea6e59b674181",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "072420e237324f99",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "superpowers/specs/2026-03-31-nexuslink-phase1-design.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-03-31-nexuslink-phase1-design"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "42eb7399bbfea67a",
+    "type": "split",
+    "children": [
+      {
+        "id": "d1c05ee31dcb0727",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fc0381bf0a6c56f4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "7ee8dc0a2f862c1f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "f81c7967a08c9a93",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f1546b17858e75af",
+    "type": "split",
+    "children": [
+      {
+        "id": "5f5ecdd6fe498d04",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5c308390d8a42ed9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "superpowers/specs/2026-03-31-nexuslink-phase1-design.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "2026-03-31-nexuslink-phase1-design 的反向链接列表"
+            }
+          },
+          {
+            "id": "65cbc5e57802a481",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "superpowers/specs/2026-03-31-nexuslink-phase1-design.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "2026-03-31-nexuslink-phase1-design 的出链列表"
+            }
+          },
+          {
+            "id": "51f43d4f062631b1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "6ff635b59a87ff3e",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "545332d77d352e14",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "superpowers/specs/2026-03-31-nexuslink-phase1-design.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "2026-03-31-nexuslink-phase1-design 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "072420e237324f99",
+  "lastOpenFiles": [
+    "context-2026-05-06-webapp-internal-test.md",
+    "nexuslink-tech-scenario-ppt-outline.md"
+  ]
+}

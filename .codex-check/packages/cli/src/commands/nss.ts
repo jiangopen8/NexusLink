@@ -1,0 +1,77 @@
+import { Command } from 'commander';
+import { NSSModule } from '@nexuslink/core-nss';
+import { ConfigStore } from '@nexuslink/core-config';
+import { OutputFormatter } from '../output/formatter.js';
+import { CLIError } from '../output/errors.js';
+import { readFileSync } from 'fs';
+
+export function nssCommands(program: Command, formatter: OutputFormatter): void {
+  const nss = program.command('nss').description('NSS skill registry management');
+
+  nss
+    .command('publish <file>')
+    .description('Publish an NSS skill descriptor')
+    .action(async (file: string) => {
+      try {
+        const raw = readFileSync(file, 'utf-8');
+        const descriptor = file.endsWith('.json') ? JSON.parse(raw) : JSON.parse(raw);
+        const config = new ConfigStore();
+        const nssModule = new NSSModule(config);
+        const result = await nssModule.publish(descriptor);
+        formatter.table(['Field', 'Value'], [['Skill ID', result.skillId], ['Tx Hash', result.txHash]]);
+      } catch (err) {
+        throw new CLIError((err as Error).message, 'NSS_PUBLISH_FAILED');
+      }
+    });
+
+  nss
+    .command('discover <intent>')
+    .option('--min-pose <score>', 'Minimum PoSE score', '0')
+    .option('--limit <n>', 'Maximum results', '10')
+    .description('Discover skills by intent')
+    .action(async (intent: string, opts: any) => {
+      try {
+        const config = new ConfigStore();
+        const nssModule = new NSSModule(config);
+        const skills = await nssModule.discover(intent, { limit: parseInt(opts.limit) });
+        if (skills.length === 0) { console.log('No skills found for: ' + intent); return; }
+        formatter.table(['Skill ID', 'Name', 'Publisher', 'Price'],
+          skills.map((s: any) => [s.skillId, s.name, s.publisherDid, s.priceUsdc ?? 'free']));
+      } catch (err) {
+        throw new CLIError((err as Error).message, 'NSS_DISCOVER_FAILED');
+      }
+    });
+
+  nss
+    .command('invoke <skillId>')
+    .option('--input <json>', 'Input as JSON string')
+    .description('Invoke a skill')
+    .action(async (skillId: string, opts: any) => {
+      try {
+        const config = new ConfigStore();
+        const nssModule = new NSSModule(config);
+        const input = opts.input ? JSON.parse(opts.input) : {};
+        const result = await nssModule.invoke(skillId, input);
+        formatter.json(result);
+      } catch (err) {
+        throw new CLIError((err as Error).message, 'NSS_INVOKE_FAILED');
+      }
+    });
+
+  nss
+    .command('validate <file>')
+    .description('Validate an NSS skill descriptor')
+    .action(async (file: string) => {
+      const raw = readFileSync(file, 'utf-8');
+      const descriptor = file.endsWith('.json') ? JSON.parse(raw) : JSON.parse(raw);
+      const config = new ConfigStore();
+      const nssModule = new NSSModule(config);
+      const result = nssModule.validate(descriptor);
+      if (result.valid) {
+        formatter.success('NSS descriptor is valid');
+      } else {
+        formatter.error('Validation errors: ' + result.errors.join(', '));
+        process.exit(1);
+      }
+    });
+}
